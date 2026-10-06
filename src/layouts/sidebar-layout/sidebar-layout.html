@@ -1,59 +1,66 @@
 <header class="flex flex-col justify-between bg-lime-900 rounded-md w-85 min-h-screen py-7 px-6">
 
-    <!-- Primer grupo -->
-    <div>
-        <span class="bg-amber-600 text-lg font-semibold p-2 rounded-md">L</span>
-        <div class="ml-4">
-            <span class="block text-2xl text-white">Raíz</span>
-            <span class="block text-xs text-lime-100">Sistema Gestión Productos</span>
+    <!-- Grupo Principal -->
+    <div class="space-y-12">
+
+        <!-- Primer grupo -->
+        <div class="flex">
+            <span class="flex items-center px-4 bg-amber-600 text-lg text-center font-semibold rounded-md">L</span>
+            <div class="ml-4">
+                <span class="block text-2xl text-white">Raíz</span>
+                <span class="block text-xs text-lime-100">Sistema Gestión Productos</span>
+            </div>
+        </div>
+
+        <!-- Segundo Grupo -->
+        <div class="flex flex-col space-y-2">
+            <span class="text-xs text-gray-400">MENÚ</span>
+        
+            <a href=""
+                routerLink="/productos"
+                class="flex items-center w-full px-4 py-3 rounded-md text-white">
+                <span class="material-icons mr-6">
+                    inventory_2
+                </span>
+                Productos
+            </a>
+    
+            <a href=""
+                routerLink="/categorias"
+                class="flex items-center w-full px-4 py-3 rounded-md text-white">
+                
+                <span class="material-icons mr-6">
+                    category
+                </span>
+                Categorías
+            </a>
+    
+            <a href=""
+                class="flex items-center w-full px-4 py-3 rounded-md text-white">
+                <span class="material-icons mr-6">
+                    point_of_sale
+                </span>
+                Ventas
+            </a>
+    
+            <a href=""
+                class="flex items-center w-full px-4 py-3 rounded-md text-white">
+                <span class="material-icons mr-6">
+                    shopping_cart
+                </span>
+                Compras
+            </a>
+    
         </div>
     </div>
 
-    <!-- Segundo Grupo -->
-    <div class="flex flex-col space-y-2">
-        <span>MENÚ</span>
-    
-        <a href=""
-            routerLink="/productos"
-            class="flex items-center w-full px-4 py-3 rounded-md text-white">
-            <span class="material-icons">
-                inventory_2
-            </span>
-            Productos
-        </a>
 
-        <a href=""
-            routerLink="/categorias"
-            class="flex items-center w-full px-4 py-3 rounded-md text-white">
-            
-            <span class="material-icons">
-                category
-            </span>
-            Categorías
-        </a>
-
-        <a href=""
-            class="flex items-center w-full px-4 py-3 rounded-md text-white">
-            <span class="material-icons-outlined">
-                point_of_sale
-            </span>
-            Ventas
-        </a>
-
-        <a href=""
-            class="flex items-center w-full px-4 py-3 rounded-md text-white">
-            <span class="material-icons">
-                shopping_cart
-            </span>
-            Compras
-        </a>
-
-    </div>
 
     <!-- Tercer Grupo -->
     <div>
-        <span>JG</span>
-        <span>Julio Gonzales</span>
+        <hr class="mb-5 text-lime-50">
+        <span class="rounded-full p-2 bg-amber-500 mr-3">JG</span>
+        <span class="text-lg text-lime-100 font-semibold">Julio Gonzales</span>
     </div>
 
 </header>
