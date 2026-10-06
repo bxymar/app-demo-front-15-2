@@ -1,12 +1,16 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { DesktopLayout } from '../layouts/desktop-layout/desktop-layout';
+import { MovilLayout } from '../layouts/movil-layout/movil-layout';
+import { IsResponsive } from '../services/is-responsive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [DesktopLayout, MovilLayout],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('app-demo-frontend');
+ 
+  public responsivoService = inject(IsResponsive);
 }
