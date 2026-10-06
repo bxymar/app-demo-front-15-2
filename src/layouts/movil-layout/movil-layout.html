@@ -1,1 +1,18 @@
-<p>movil-layout works!</p>
+<div>
+    
+    <span 
+        class="material-icons cursor-pointer p-2 bg-lime-900 text-lime-50 m-2 rounded-full"
+        (click)="alternarMenu()">
+        menu
+    </span>
+    
+    @if(menuAbierto()){
+        <app-sidebar-layout />
+    }
+
+    <!-- Contenido dinámico -->
+    <section>
+        <router-outlet/>
+    </section>
+
+</div>
