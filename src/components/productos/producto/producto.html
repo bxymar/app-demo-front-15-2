@@ -1,1 +1,5 @@
-<p>producto works!</p>
+@if(isResponsive.isMovil()){
+    <app-producto-listar-movil />
+}@else{
+    <app-producto-listar />
+}
