@@ -38,4 +38,14 @@ export class ProductoService {
     // Peticion http
     //return this.http.get<any>(`http://localhost:8080/api/productos/obtener`);
   }
+
+  // Servicio para crear un nuevo producto
+  public crearProducto( producto: {
+    nombre: string,
+    precio: number,
+    estado: boolean
+  }){
+    // Mendiante el insert estamos creando un nuevo producto
+    return this.supabase.from('productos').insert(producto);
+  }
 }
