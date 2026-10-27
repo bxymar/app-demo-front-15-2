@@ -1,1 +1,22 @@
-<p>producto-listar works!</p>
+<table>
+
+    <thead>
+        <tr>
+            <th class="bg-orange-300 text-lg rounded-bl-md rounded-tl-md py-3 pl-6">Id</th>
+            <th class="bg-orange-300 text-lg py-3">Nombre</th>
+            <th class="bg-orange-300 text-lg py-3">Precio</th>
+            <th class="bg-orange-300 text-lg rounded-br-md rounded-tr-md py-3 pr-6">Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(producto of listaProductos; track $index){
+            <tr>
+                <td>{{producto.id}}</td>
+                <td>{{producto.nombre}}</td>
+                <td>{{producto.precio}}</td>
+                <td>{{producto.estado}}</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

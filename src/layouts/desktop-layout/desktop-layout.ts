@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './desktop-layout.css',
 })
 export class DesktopLayout {
-
+  // npx @angular/cli@21 new nombre-proyecto
 }
