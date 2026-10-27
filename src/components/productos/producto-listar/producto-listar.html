@@ -1,22 +1,38 @@
-<table>
+<table class="w-full">
 
     <thead>
         <tr>
-            <th class="bg-orange-300 text-lg rounded-bl-md rounded-tl-md py-3 pl-6">Id</th>
-            <th class="bg-orange-300 text-lg py-3">Nombre</th>
-            <th class="bg-orange-300 text-lg py-3">Precio</th>
+            <th class="text-left bg-orange-300 text-lg rounded-bl-md rounded-tl-md py-3 pl-6">Id</th>
+            <th class="text-left bg-orange-300 text-lg py-3">Nombre</th>
+            <th class="text-left bg-orange-300 text-lg py-3">Precio</th>
             <th class="bg-orange-300 text-lg rounded-br-md rounded-tr-md py-3 pr-6">Estado</th>
         </tr>
     </thead>
     <tbody>
         @for(producto of listaProductos; track $index){
             <tr>
-                <td>{{producto.id}}</td>
-                <td>{{producto.nombre}}</td>
-                <td>{{producto.precio}}</td>
-                <td>{{producto.estado}}</td>
+                <td class="text-left py-3 pl-6 font-semibold">{{producto.id}}</td>
+                <td class="text-left">{{producto.nombre}}</td>
+                <td class="text-left font-bold text-lg text-orange-900">Bs. {{producto.precio}}</td>
+                
+                @if (producto.estado === true){
+                    <td class="text-green-500">Activo</td>
+                }@else{
+                    <td class="text-red-500">Inactivo</td>
+                }
+
+                <!-- @if(producto.estado === "ACTIVO"){
+                    <td class="text-green-500">Activo</td>
+                }@else if (producto.estado === "PENDIENTE") {
+                    <td class="text-yellow-500">Pendiente</td>
+                }
+                @else{
+                    <td class="text-red-500">Inactivo</td>
+                } -->
             </tr>
         }
     </tbody>
+
+    
 
 </table>
