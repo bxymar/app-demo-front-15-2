@@ -1,8 +1,82 @@
 <div class="fixed inset-0 flex items-center justify-center z-50 bg-black/50">
 
-    <section class="bg-white w-full px-5 py-3 rounded-4xl shadow-md">
+    <section class="bg-white w-full max-w-2xl px-5 py-3 rounded-4xl shadow-md">
+        
+        <div class="flex justify-between items-center">
+            <div>
+                <h2 class="text-2xl font-semibold">Nuevo Producto</h2>
+                <p class="text-sm text-zinc-500">Formulario para registrar un nuevo producto</p>
+            </div>
+    
+            <!-- Icono para cerrar el formulario -->
+            <!-- Google Icons para los íconos, usar la siguiente clase (class) material-icons -->
+            <span class="bg-zinc-200 p-1 cursor-pointer rounded-full material-icons" (click)="cerrar.emit()">close</span>
+        </div>
 
-        <h2>Este es tu formulario</h2>
+        <form class="mt-5 space-y-5" (ngSubmit)="guardarProducto()">
+
+            <!-- Contenedor para el nombre -->
+            <div>
+                <label for="" class="font-semibold">Nombre:</label>
+                <input 
+                    type="text"
+                    class="w-full bg-zinc-200 rounded-4xl p-2"
+                    required
+                    name="nombre"
+                    [(ngModel)]="nombre"
+                >
+            </div>
+
+            <!-- Contenedor para el precio -->
+            <div>
+                <label for="" class="font-semibold">Precio:</label>
+                <input 
+                    type="number"
+                    class="w-full bg-zinc-200 rounded-4xl p-2"
+                    required
+                    name="precio"
+                    [(ngModel)]="precio"
+                >
+            </div>
+
+            <!-- Contenedor para el estado -->
+            <!-- Estado: boolean => true | false -->
+            <!-- Estado: Pendiente, Completado, Procesando, Eliminado, Editado -->
+
+            <!-- ¿Como puedo vincular las entradas (inputs) con los campos o propiedades definidas en el codigo .ts? -->
+
+            <div>
+                <label for="" class="font-semibold">Estado:</label>
+                <input 
+                    type="text"
+                    class="w-full bg-zinc-200 rounded-4xl p-2"
+                    required
+                    name="estado"
+                    [(ngModel)]="estado"
+                >
+            </div>
+
+            <!-- Seccion de botones (Cancelar y Guardar) -->
+            <div class="flex justify-end space-x-3 mt-5">   
+
+                <button
+                    (click)="cerrar.emit()"
+                    type="button"
+                    class="font-semibold text-lg px-2 py-3 bg-zinc-300 rounded-2xl"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="submit"
+                    class="font-semibold text-lg px-2 py-3 bg-zinc-900 text-zinc-50 rounded-2xl"
+                >
+                    Guardar
+                </button>
+
+            </div>            
+
+        </form>
 
     </section>
 

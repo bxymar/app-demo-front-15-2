@@ -1,5 +1,15 @@
+<button (click)="abrirFormulario()">
+    Nuevo Producto
+</button>
+
 @if(isResponsive.isMovil()){
     <app-producto-listar-movil />
 }@else{
     <app-producto-listar />
+}
+
+@if (formularioVisibilidad()){
+    <app-producto-guardar
+        (cerrar)="cerrarFormulario()"
+    />
 }

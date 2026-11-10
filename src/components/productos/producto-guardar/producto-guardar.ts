@@ -1,16 +1,17 @@
 import { Component, inject, output } from '@angular/core';
 import { ProductoService } from '../../../services/producto-service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-producto-guardar',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './producto-guardar.html',
   styleUrl: './producto-guardar.css',
 })
 export class ProductoGuardar {
 
   // Inyectar el servicio del producto para crear uno nuevo
-  private productoServicio = inject(ProductoService); 
+  private productoServicio = inject(ProductoService);  
 
   // Evento para cerrar el formulario (Producto Guardar)
   public cerrar = output<void>();

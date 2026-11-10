@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.tema-oscuro{
+    background-color: #202020;
+}
+
+.tema-claro{
+    background-color: #eaeff9;
+}
+
+.tipografia{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.menu-oscuro{
+    color: #d5d5d5;
+}
+
+.menu-claro{
+    color: #202020;
+}
+
+.copyright{
+    color: #d5d5d5; 
+}
+
+.enlace-modo-oscuro{
+    color: #d5d5d5;
+}
+
+.enlace-modo-claro{
+    color: #202020;
+}
+
+.icono-modo-oscuro{
+    color: #d5d5d5;
+}
+
+.icono-modo-claro{
+    color: #202020;
+}
+
+.icono-dark{
+    color: #d49e4e;
+    background-color: #383838;
+}
+
+.tag{
+    background-color: #383838;
+    color: #d49e4e;
+}
+
+.contenedor-enlace:hover{
+    background-color: #006afe;
+    transition: all 200ms ease-in-out;
+}
+
+.contenedor-enlace:hover .enlace-modo-oscuro,
+.contenedor-enlace:hover .enlace-modo-claro,
+.contenedor-enlace:hover .icono-modo-oscuro,
+.contenedor-enlace:hover .icono-modo-claro {
+    color: #ffffff;
+}
